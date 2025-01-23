@@ -49,45 +49,44 @@
         .toc a:hover {
             text-decoration: underline;
         }
+       .toc.collapsed {
+            height: 40px; /* Thanh mục lục hẹp khi thu nhỏ */
+            overflow: hidden;
+        }
+
+        .toggle-button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            color: #007BFF;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 20px;
+            line-height: 0;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-        .toc {
-            width: 100%; /* Chiếm toàn bộ chiều ngang màn hình */
-            bottom: 0; /* Đặt sát cạnh dưới */
-            left: 0;
-            transform: none; /* Không cần dịch chuyển */
-            text-align: center; /* Canh giữa nội dung */
-            padding: 10px 0;
-        }
-
-        .toc ul {
-            flex-direction: column; /* Sắp xếp theo cột trên màn hình nhỏ */
-            gap: 5px; /* Giảm khoảng cách giữa các mục */
-        }
-    }
-
-            .toc h3 {
-                color: white;
-                margin: 0;
-            }
-
             .toc ul {
-                display: flex;
-                flex-direction: column; /* Danh sách dạng dọc */
-                padding: 0;
-                margin: 0;
-                list-style: none;
+                flex-direction: column; /* Sắp xếp dạng cột trên màn hình nhỏ */
+                align-items: center;
+                gap: 5px;
             }
 
-            .toc ul li {
-                margin: 10px 0;
+            .toc.collapsed ul {
+                display: none; /* Ẩn danh sách mục khi thu nhỏ */
             }
 
-            .toc ul li a {
-                color: white;
-            }
-
-            .content {
-                margin-left: 0; /* Không để khoảng trống bên trái */
+            .toc.collapsed .toggle-button {
+                top: 5px;
             }
         }
         header {
