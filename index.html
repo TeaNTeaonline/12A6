@@ -50,18 +50,20 @@
             text-decoration: underline;
         }
         @media (max-width: 768px) {
-            .toc {
-                position: fixed; /* Không cố định khi màn hình nhỏ */
-                bottom: 0;
-                left: 0;
-                width: 100%; /* Chiếm toàn bộ chiều ngang */
-                padding: 0 0;
-                border: none;
-                border-radius: 0;
-                background: linear-gradient(to right, #8b0000, #b22222); /* Đổi màu để làm nổi bật */
-                color: white;
-                text-align: center;
-            }
+        .toc {
+            width: 100%; /* Chiếm toàn bộ chiều ngang màn hình */
+            bottom: 0; /* Đặt sát cạnh dưới */
+            left: 0;
+            transform: none; /* Không cần dịch chuyển */
+            text-align: center; /* Canh giữa nội dung */
+            padding: 10px 0;
+        }
+
+        .toc ul {
+            flex-direction: column; /* Sắp xếp theo cột trên màn hình nhỏ */
+            gap: 5px; /* Giảm khoảng cách giữa các mục */
+        }
+    }
 
             .toc h3 {
                 color: white;
@@ -77,7 +79,7 @@
             }
 
             .toc ul li {
-                margin: 15px 0;
+                margin: 10px 0;
             }
 
             .toc ul li a {
