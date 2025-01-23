@@ -33,22 +33,44 @@
             line-height: 1.8;
         }
         .toc {
-        position: fixed; /* Cố định vị trí */
-        top: 150px; /* Khoảng cách từ đỉnh màn hình */
-        left: 10px; /* Khoảng cách từ cạnh trái */
-        background: linear-gradient(to right, #8b0000, #b22222);
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        width: 200px; /* Đặt chiều rộng cố định */
-        }   
-        .toc a {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to right, #8b0000, #b22222);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            z-index: 1000;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .toc ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc ul li {
+            display: inline;
+        }
+
+        .toc ul li a {
             text-decoration: none;
             color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
         }
-        .toc a:hover {
-            text-decoration: underline;
+
+        .toc ul li a:hover {
+            background: linear-gradient(to right, #8b0000, #b22222);
         }
+
        .toc.collapsed {
             height: 40px; /* Thanh mục lục hẹp khi thu nhỏ */
             overflow: hidden;
