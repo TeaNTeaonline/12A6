@@ -32,6 +32,23 @@
             padding: 0;
             line-height: 1.8;
         }
+        .toc {
+        position: fixed; /* Cố định vị trí */
+        top: 150px; /* Khoảng cách từ đỉnh màn hình */
+        left: 10px; /* Khoảng cách từ cạnh trái */
+        background: #f9f9f9;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 200px; /* Đặt chiều rộng cố định */
+        }   
+        .toc a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
         header {
             background: linear-gradient(to right, #8b0000, #b22222);
             color: white;
@@ -100,7 +117,16 @@
         <h1>Các nhà lãnh đạo trong cách mạng Việt Nam</h1>
     </header>
     <main>
-        <section>
+        <div class="toc">
+            <h3>Mục lục</h3>
+            <hr>
+            <ul>
+                <li><a href="#1">CM tháng 8</a></li>
+                <li><a href="#2">Kháng chiến chống Pháp</a></li>
+                <li><a href="#3">Kháng chiến chống Mĩ</a></li>
+            </ul>
+        </div>
+        <section id="1">
             <h2>Chủ tịch Hồ Chí Minh (Cách mạng tháng 8)</h2>
             <img src="media/HCM01.jpg" alt="Ảnh Hồ Chí Minh">
             <p>
@@ -132,7 +158,7 @@
                 </li>
             </ul>
         </section>
-        <section>
+        <section id="2">
             <h2>Nguyễn Trung Trực (Kháng chiến chống Pháp)</h2>
             <img src="media/NTT01.png" alt="Ảnh Nguyễn Trung Trực">
             <p>
@@ -156,7 +182,7 @@
                 <li>Thể hiện tinh thần bất khuất trước kẻ thù.</li>
             </ul>
         </section>
-        <section>
+        <section id="3">
             <h2>Võ Chí Công (Kháng chiến chống Mỹ)</h2>
             <img src="media/VCC01.jpg" alt="Ảnh Võ Chí Công">
             <p>
