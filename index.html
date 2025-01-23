@@ -75,6 +75,17 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+             .toc {
+                 position: fixed; /* Cố định vị trí */
+                 bottom: 0; /* Khoảng cách từ đỉnh màn hình */
+                 left: 0; /* Khoảng cách từ cạnh trái */
+                 background: linear-gradient(to right, #8b0000, #b22222);
+                 padding: 10px;
+                 border: 1px solid #ddd;
+                 border-radius: 5px;
+                 max-width: 100%; /* Đặt chiều rộng cố định */
+                 height: 5px;
+            }   
             .toc ul {
                 flex-direction: column; /* Sắp xếp dạng cột trên màn hình nhỏ */
                 align-items: center;
