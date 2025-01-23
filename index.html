@@ -75,11 +75,41 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .toc {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to right, #8b0000, #b22222);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            z-index: 1000;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+        }
+
             .toc ul {
                 flex-direction: column; /* Sắp xếp dạng cột trên màn hình nhỏ */
                 align-items: center;
                 gap: 5px;
             }
+            .toc ul li {
+            display: inline;
+        }
+
+        .toc ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .toc ul li a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
 
             .toc.collapsed ul {
                 display: none; /* Ẩn danh sách mục khi thu nhỏ */
