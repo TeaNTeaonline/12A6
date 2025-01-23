@@ -49,6 +49,45 @@
         .toc a:hover {
             text-decoration: underline;
         }
+        @media (max-width: 768px) {
+            .toc {
+                position: relative; /* Không cố định khi màn hình nhỏ */
+                top: 0;
+                left: 0;
+                width: 100%; /* Chiếm toàn bộ chiều ngang */
+                padding: 10px 0;
+                border: none;
+                border-radius: 0;
+                background: #007BFF; /* Đổi màu để làm nổi bật */
+                color: white;
+                text-align: center;
+            }
+
+            .toc h3 {
+                color: white;
+                margin: 0;
+            }
+
+            .toc ul {
+                display: flex;
+                flex-direction: column; /* Danh sách dạng dọc */
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            .toc ul li {
+                margin: 5px 0;
+            }
+
+            .toc ul li a {
+                color: white;
+            }
+
+            .content {
+                margin-left: 0; /* Không để khoảng trống bên trái */
+            }
+        }
         header {
             background: linear-gradient(to right, #8b0000, #b22222);
             color: white;
